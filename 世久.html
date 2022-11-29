@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>世久營造固定資產表</title>
+	<style type="text/css">
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html,body{
+	width: 120%;
+			height: 830px;
+		
+background-image: url("https://images.pexels.com/photos/7255882/pexels-photo-7255882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+
+}
+
+.side-menu{
+	position: relative;
+	width: 300px;
+	height: 130%;
+	padding: 50px 0;
+	box-sizing: border-box;
+	background-image: linear-gradient(0deg,#393c3f,#3b2431f2);
+	display: flex;
+	flex-direction: column;
+	box-shadow: 15px 0px 15px rgba(80, 80, 82, 0.6);
+
+}
+.side-menu form{
+	display: flex;
+	margin: 0 10px 50px;
+	border-radius: 100px;
+	border:1px solid rgb(255,255,255,.4);
+}
+.side-menu form input,
+.side-menu form button{
+	border:none;
+	background-color: transparent;
+	color: #fff;
+	padding: 5px 10px;
+}
+.side-menu form input{
+	width: 230px;
+}
+.side-menu form button{
+	width: 50px;
+}
+.side-menu form input:focus,
+.side-menu form button:focus{
+	outline: none;
+}
+.side-menu label{
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	background-color: #000;
+	color: #fff;
+	right: -40px;
+	top: 10;
+	bottom: 0;
+	margin: auto;
+	line-height: 80px;
+	text-align: center;
+	font-size: 40px;
+	border-radius: 0 10px 10px 0;
+}
+#side-menu-switch{
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+}
+#side-menu-switch:checked + .side-menu{
+	transform: translateX(0);
+}
+#side-menu-switch:checked + .side-menu label .fa{
+	transform: scaleX(-1);
+} 
+.nav a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+.nav li{
+	position: relative;
+}
+.nav li + li a::before{
+	content: '';
+	position: absolute;
+	border-top: 1px solid rgb(255,255,255,.4);
+	left: 10px;
+	right: 10px;
+	top: 0;
+}
+.nav a .fa{
+	margin-right: -1.1em;
+	transform: scale(0);
+	transition: .3s;
+}
+.nav li:hover .fa{
+	margin-right: 0em;
+	transform: scale(1);
+}
+.nav li:hover > a{
+	background-color: rgba(0,0,0,.5);
+}
+.nav ul{
+	display: none;
+	position: absolute;
+	left: 100%;
+	width: 300px;
+	top: 6px;
+	background-color: rgba(255,255,255,.2);
+	box-shadow: 5px 5px 10px hsla(240, 40%, 15%,.6);
+}
+.nav li:hover > ul{
+	display: block;
+}
+	</style>	
+</head>
+<body>
+	
+<input type="checkbox" name="" id="side-menu-switch">
+
+<div class="side-menu">
+
+	<ul class="nav">
+		<li>
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i> 
+				01-土地
+			</a>
+			<ul>
+				<li>
+					<a href="123">01-辦公室用地</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+			
+					</ul>
+				</li>
+				<li>
+					<a href="123">02-宿舍用地</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="123">03-倉庫用地</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="123">04-停車位用地</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i> 
+				02-房屋及建物
+			</a>
+			<ul>
+				<li>
+					<a href="123">01-辦公室</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="123">02-宿舍</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="123">03-倉庫</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="123">04-停車位</a>
+					<ul>
+						<li><a href="123">DAY1</a></li>
+
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i> 
+				21-機具設備
+			</a>
+			<ul>
+				<li>
+					<a href="123">01-	土方工程機具設備</a>
+					<ul>
+						<li><a href="https://drive.google.com/drive/folders/1tiG7pBjIDa4bIb-KXz821KD9PFJVBz16?usp=share_link">01-履帶式挖溝機</a></li>
+						<li><a href="123">02-履帶式推土機</a></li>
+						<li><a href="123">03-履帶式裝料機</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1_wxTwc0aa54XAMPcDOAG4pIpbjZpHfii?usp=share_link">04-輪胎式裝料機</a></li>
+						<li><a href="123">05-液壓破碎機</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1PwOBOTNkMDITs4WTnfptmWV90bMfNGSg?usp=share_link">06-壓路機</a></li>
+						<li><a href="123">07-灌漿平台</a></li>
+					</ul>
+					
+				</li>
+				<li>
+					<a href="123">02-機礎工程機具設備</a>
+					<ul>
+						<li><a href="https://drive.google.com/drive/folders/1SOU96H073QoxImiOrLWKagftFE4PBAHz?usp=share_link">01-連續壁液壓式挖掘機</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1XTW7IUhAcjqqN3-WfgDzAnOkSwS1uedz?usp=share_link">02-連續壁液壓式挖掘機抓斗</a></li>
+						<li><a href="123">03-連續壁機械式挖掘機</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1fO8yARqGacBXOGwEnoAsuWHcm9wRAmiM?usp=share_link">04-震動打樁機</a></li>
+						<li><a href="123">05-反循環鑽機</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">03-隧道鑽灌工程機具設備</a>
+					<ul>
+						<li><a href="123">01-軌道式雙鎗鑽堡</a></li>
+						<li><a href="123">02-隧道開挖出渣機</a></li>
+						<li><a href="123">03-隧道電動機車頭</a></li>
+						<li><a href="123">04-隧道出渣車</a></li>
+						<li><a href="123">05-軸流式通風機</a></li>
+						<li><a href="123">06-手提式鑽機</a></li>
+						<li><a href="123">07-鑽機</a></li>
+						<li><a href="123">08-灌漿機</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">04-起重機具設備</a>
+					<ul>
+						<li><a href="https://drive.google.com/drive/folders/1nZgPV30rz4DxmaELxGSB4l2GrT7kQWBt?usp=share_link">01-履帶式起重吊車</a></li>
+						<li><a href="123">02-門型起重機</a></li>
+						<li><a href="123">03-吊車桁架</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1nZgPV30rz4DxmaELxGSB4l2GrT7kQWBt?usp=share_link">04-全套管</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">05-混凝土工程機</a>
+					<ul>
+						<li><a href="123">01-混凝土泮合場</a></li>
+						<li><a href="123">02-噴漿機</a></li>
+						<li><a href="123">03-渦輪預拌機</a></li>
+						<li><a href="123">04-中壓幫浦</a></li>
+						<li><a href="123">05-慢速桶、量水桶</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">06-工程車輛</a>
+					<ul>
+						<li><a href="123">01-水牛車</a></li>
+						<li><a href="123">02-棄土車</a></li>
+						<li><a href="123">03-鐵牛車</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">07-量測機具設備</a>
+					<ul>
+						<li><a href="123">01-水準儀</a></li>
+						<li><a href="123">02-經緯儀</a></li>
+						<li><a href="123">03-光波測距儀</a></li>
+						<li><a href="123">04-雷射定位儀</a></li>
+						<li><a href="123">05-荷蘭錐貫入儀</a></li>
+						<li><a href="123">06-流量計</a></li>
+						<li><a href="123">07-超音波測定儀</a></li>
+						<li><a href="123">08-CPT-卡車</a></li>
+						<li><a href="123">09-噪音計、傾斜儀</a></li>
+						<li><a href="123">10-氣體偵測器</a></li>
+						<li><a href="123">11-測微器</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">08-其他機具設備</a>
+					<ul>
+						<li><a href="https://drive.google.com/drive/folders/1S_IvFXLegI6bcR6hvWbsRQ2ri66hXSOa?usp=share_link">01-柴油發電機</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1ZzLUzTJWO1yR2mvHIlsaM_ckNm_Iztsh?usp=share_link">02-空壓機</a></li>
+						<li><a href="123">03-貨櫃</a></li>
+						<li><a href="123">04-CO2電焊機</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1N2KvLXfY04gw6i43u1YJlqMDFgWUriH6?usp=share_link">05-高壓清洗機1</a></li>
+						<li><a href="123">06-棄土桶</a></li>
+						<li><a href="123">07-電腦噴印機</a></li>
+						<li><a href="123">08-覆工版樑型鋼</a></li>
+						<li><a href="123">09-柴油加油機</a></li>
+						<li><a href="123">10-動力壓密夯擊重錘</a></li>
+						<li><a href="123">11-動力壓密淺層夯錘</a></li>
+						<li><a href="123">12-沖刷刀</a></li>
+						<li><a href="123">13-油壓押管器</a></li>
+						<li><a href="123">14-引爆器</a></li>
+						<li><a href="123">15-活動廁所</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i> 
+				31-運輸設備
+			</a>
+			<ul>
+				
+				<li>
+					<a href="123">01-汽車</a>
+					<ul>
+						<li><a href="123">01-小客車</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1A14SL03aSbB_L2A1DV5hDsLwkfTq2_VJ?usp=share_link">02-客貨二用車</a></li>
+						<li><a href="https://drive.google.com/drive/folders/1i5I31bY_UmoP20biyY6wziLTcU-BaPEX?usp=share_link">03-貨卡車</a></li>
+						<li><a href="123">04-休旅車</a></li>
+						<li><a href="123">05-吊卡車</a></li>
+						<li><a href="123">06-加油車</a></li>
+						<li><a href="123">07-水車</a></li>
+						<li><a href="123">08-土車</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">02-機車</a>
+					<ul>
+						<li><a href="123">01-重型機車</a></li>
+						<li><a href="123">02-輕型機車</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i> 
+				41-辦公設備
+			</a>
+			<ul>
+				<li>
+					<a href="123">01-電腦設備</a>
+					<ul>
+						<li><a href="123">01-電腦</a></li>
+						<li><a href="123">02-數據機</a></li>
+						<li><a href="123">03-印表機</a></li>
+						<li><a href="123">04-掃描器</a></li>
+						<li><a href="123">05-繪圖機</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">02-事物機	</a>
+					<ul>
+						<li><a href="123">01-影印機</a></li>
+						<li><a href="123">02-傳真機</a></li>
+						<li><a href="123">03-打字機</a></li>
+						<li><a href="123">04-打卡鐘</a></li>
+						<li><a href="123">05-碎紙機</a></li>
+						<li><a href="123">06-投影、幻燈機</a></li>
+						<li><a href="123">07-數位相機</a></li>
+						<li><a href="123">08-監視設備</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">03-辦公傢俱</a>
+					<ul>
+						<li><a href="123">01-辦公桌</a></li>
+						<li><a href="123">02-電腦桌</a></li>
+						<li><a href="123">03-會議桌</a></li>
+						<li><a href="123">04-看圖燈桌</a></li>
+						<li><a href="123">05-茶几</a></li>
+						<li><a href="123">06-公文櫃</a></li>
+						<li><a href="123">07-辦公椅</a></li>
+						<li><a href="123">08-沙發椅</a></li>
+						<li><a href="123">09-屏風</a></li>
+						<li><a href="123">10-床鋪</a></li>
+						<li><a href="123">11-折疊桌</a></li>
+						<li><a href="123">12-折疊椅</a></li>
+						<li><a href="123">13-圓椅</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				<i class="fa fa-users" aria-hidden="true"></i> 
+				51-什項設備
+
+			</a>
+			<ul>
+				<li>
+					<a href="123">01-空調設備</a>
+					<ul>
+						<li><a href="123">01-冷氣機</a></li>
+						<li><a href="123">02-空氣濾清機</a></li>
+						<li><a href="123">03-除濕機</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="123">02-電器設備</a>
+					<ul>
+						<li><a href="123">01-電視機</a></li>
+						<li><a href="123">02-錄放影機</a></li>
+						<li><a href="123">03-洗衣機</a></li>
+						<li><a href="123">04-飲水機</a></li>
+						<li><a href="123">05-冰箱</a></li>
+						<li><a href="123">06-音響</a></li>
+						<li><a href="123">07-吸塵器</a></li>
+						<li><a href="123">08-熱水器</a></li>
+					</ul>
+
+
+				</li>
+				<li>
+					<a href="123">03-通信器材</a>
+					<ul>
+						<li><a href="123">01-電話</a></li>
+						<li><a href="123">02-行動電話</a></li>
+						<li><a href="123">03-呼叫器</a></li>
+						<li><a href="123">04-無線對講機</a></li>
+					</ul>
+
+				</li>
+				<li>
+					<a href="123">04-消防器材</a>
+					<ul>
+						<li><a href="123">01-滅火器</a></li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="123">05-度量衡器</a>
+					<ul>
+						<li><a href="123">01-磅秤</a></li>
+						<li><a href="123">02-電子秤</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+</div>
+
+
+
+
+</body>
+</html>
